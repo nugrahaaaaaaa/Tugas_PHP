@@ -13,7 +13,6 @@
             SOAL NO 1
             Tunjukan dengan menggunakan echo berapa panjang dari string yang diberikan berikut! 
             Tunjukkan juga jumlah kata di dalam kalimat tersebut! 
-
             Contoh: 
             $string = "PHP is never old";
             Output:
@@ -35,7 +34,17 @@
 
         $first_sentence = "Hello PHP!" ; // Panjang string 10, jumlah kata: 2
         $second_sentence = "I'm ready for the challenges"; // Panjang string: 28,  jumlah kata: 5
-        
+        //jawaban
+        echo "Panjang String: ". strlen($first_sentence);
+        echo "<br>";
+        echo "Jumlah kata: ". str_word_count($first_sentence);
+        echo "<br>";
+
+        echo "Panjang String: ". strlen($second_sentence);
+        echo "<br>";
+        echo "Jumlah Kata: ". str_word_count($second_sentence);
+
+
         echo "<h3> Soal No 2</h3>";
         /* 
             SOAL NO 2
@@ -48,16 +57,19 @@
         echo "<label>String: </label> \"$string2\" <br>";
         echo "Kata pertama: " . substr($string2, 0, 1) . "<br>" ; 
         // Lanjutkan di bawah ini
-        echo "Kata kedua: " ;
-        echo "<br> Kata Ketiga: " ;
+        echo "Kata kedua: ". substr($string2, 2, 5);
+        echo "<br> Kata Ketiga: ". substr($string2, 7, 10). "<br>" ;
+
+
         echo "<h3> Soal No 3 </h3>";
         /*
             SOAL NO 3
             Mengubah karakter atau kata yang ada di dalam sebuah string.
         */
         $string3 = "PHP is old but Good!";
-        echo "String: \"$string3\" "; 
+        echo "String: \"$string3\" <br>"; 
         // OUTPUT : "PHP is old but awesome"
+        echo "Berubah Menjadi: ". str_replace("Good", "awesome", $string3);
 
     ?>
 </body>
